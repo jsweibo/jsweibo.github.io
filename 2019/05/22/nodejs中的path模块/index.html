@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+<!-- Baidu Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?da6d57a7f22eab05b99fae5cc3f999ee";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- End Baidu Analytics -->
+
+
+  
+  <title>nodejs中的path模块 | jsweibo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="摘要本文主要讲述了：  作用 path.basename(path[, ext]) path.delimiter path.sep path.dirname(path) path.extname(path) path.format(pathObject) path.isAbsolute(path) path.join([…paths]) path.normalize(path) path.pars">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs中的path模块">
+<meta property="og:url" content="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/index.html">
+<meta property="og:site_name" content="jsweibo">
+<meta property="og:description" content="摘要本文主要讲述了：  作用 path.basename(path[, ext]) path.delimiter path.sep path.dirname(path) path.extname(path) path.format(pathObject) path.isAbsolute(path) path.join([…paths]) path.normalize(path) path.pars">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-05-21T16:18:12.000Z">
+<meta property="article:modified_time" content="2022-07-09T09:07:10.274Z">
+<meta property="article:author" content="jsweibo">
+<meta property="article:tag" content="jsweibo的博客">
+<meta property="article:tag" content="jsweibo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="jsweibo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jsweibo</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">言者所以在意，得意而忘言</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/shame">耻辱榜</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jsweibo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-nodejs中的path模块" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/" class="article-date">
+  <time datetime="2019-05-21T16:18:12.000Z" itemprop="datePublished">2019-05-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%AD%E8%A8%80/">语言</a>►<a class="article-category-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/">nodejs</a>►<a class="article-category-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/">库</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      nodejs中的path模块
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <nav>
+            <h2>目录</h2>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摘要"><span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#作用"><span class="toc-text">作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-basename-path-ext"><span class="toc-text">path.basename(path[, ext])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-delimiter"><span class="toc-text">path.delimiter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-sep"><span class="toc-text">path.sep</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-dirname-path"><span class="toc-text">path.dirname(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-extname-path"><span class="toc-text">path.extname(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-format-pathObject"><span class="toc-text">path.format(pathObject)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-isAbsolute-path"><span class="toc-text">path.isAbsolute(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-join-…paths"><span class="toc-text">path.join([…paths])</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-normalize-path"><span class="toc-text">path.normalize(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-parse-path"><span class="toc-text">path.parse(path)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-relative-from-to"><span class="toc-text">path.relative(from, to)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#path-resolve-…paths"><span class="toc-text">path.resolve([…paths])</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+          </nav>
+          <hr />
+        
+        
+          <h1>
+  <a class="anti-copycat" href="https://jsweibo.github.io"
+    >本文作者: jsweibo</a
+  >
+</h1>
+<h1>
+  <a
+    class="anti-copycat"
+    href="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/"
+    title="nodejs中的path模块"
+  >
+    本文链接: https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/</a
+  >
+</h1>
+
+        
+        <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p>
+<ol>
+<li>作用</li>
+<li>path.basename(path[, ext])</li>
+<li>path.delimiter</li>
+<li>path.sep</li>
+<li>path.dirname(path)</li>
+<li>path.extname(path)</li>
+<li>path.format(pathObject)</li>
+<li>path.isAbsolute(path)</li>
+<li>path.join([…paths])</li>
+<li>path.normalize(path)</li>
+<li>path.parse(path)</li>
+<li>path.relative(from, to)</li>
+<li>path.resolve([…paths])</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p>path（路径）是 nodejs 的内建模块。</p>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>path 模块被用来处理 nodejs 中的文件、目录的路径。</p>
+<h2 id="path-basename-path-ext"><a href="#path-basename-path-ext" class="headerlink" title="path.basename(path[, ext])"></a>path.basename(path[, ext])</h2><p><code>path.basename(path[, ext])</code>返回文件的名称。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："package.json"</span></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  path.basename(</span><br><span class="line">    <span class="string">'C:\\Users\\whisper\\Documents\\learn\\learn_nodejs\\package.json'</span></span><br><span class="line">  )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>如果提供了扩展名作为第二个参数，那么会返回文件的基本名称。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："package"</span></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  path.basename(</span><br><span class="line">    <span class="string">'C:\\Users\\whisper\\Documents\\learn\\learn_nodejs\\package.json'</span>,</span><br><span class="line">    <span class="string">'.json'</span></span><br><span class="line">  )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-delimiter"><a href="#path-delimiter" class="headerlink" title="path.delimiter"></a>path.delimiter</h2><p><code>path.delimiter</code>表示路径定界符。</p>
+<p><code>path.delimiter</code>用于分隔多个路径。</p>
+<p><code>path.delimiter</code>的值因系统而异。</p>
+<ul>
+<li>在 POSIX 标准下，<code>path.delimiter</code>为<code>:</code>。示例：<code>/usr/bin:/bin:/usr/sbin</code>。</li>
+<li>在 Windows 下，<code>path.delimiter</code>为<code>;</code>。示例：<code>C:\\Windows\\system32;C:\\Windows</code>。</li>
+</ul>
+<h2 id="path-sep"><a href="#path-sep" class="headerlink" title="path.sep"></a>path.sep</h2><p><code>path.sep</code>表示路径片段分隔符。</p>
+<p><code>path.sep</code>用于分隔一个路径内的多个路径片段。</p>
+<p><code>path.sep</code>的值因系统而异。</p>
+<ul>
+<li>在 POSIX 标准下，路径片段分隔符为<code>/</code>。示例：<code>/usr/bin</code>。</li>
+<li>在 Windows 下，路径片段分隔符为<code>\</code>。由于反斜杠需要转义，因此需要写成<code>\\</code>。示例：<code>C:\\Windows\\system32</code>。</li>
+</ul>
+<p>在 Windows 下，正斜杠<code>/</code>和反斜杠<code>\</code>都被看做路径片段分隔符。但 nodejs 中的<code>path</code>只接受反斜杠<code>\</code>。</p>
+<h2 id="path-dirname-path"><a href="#path-dirname-path" class="headerlink" title="path.dirname(path)"></a>path.dirname(path)</h2><p><code>path.dirname(path)</code>返回路径名称。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："C:\\Users\\whisper\\Documents\\learn\\learn_nodejs"</span></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  path.dirname(</span><br><span class="line">    <span class="string">'C:\\Users\\whisper\\Documents\\learn\\learn_nodejs\\package.json'</span></span><br><span class="line">  )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-extname-path"><a href="#path-extname-path" class="headerlink" title="path.extname(path)"></a>path.extname(path)</h2><p><code>path.extname(path)</code>返回文件的扩展名。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：".json"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.extname(<span class="string">'package.json'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-format-pathObject"><a href="#path-format-pathObject" class="headerlink" title="path.format(pathObject)"></a>path.format(pathObject)</h2><p><code>path.format(pathObject)</code>返回格式化之后的路径。</p>
+<p><code>path.format(pathObject)</code>和<code>path.parse(path)</code>互为逆运算。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："C:\\path\\dir\\README.md"</span></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  path.format(&#123;</span><br><span class="line">    dir: <span class="string">'C:\\path\\dir'</span>,</span><br><span class="line">    base: <span class="string">'README.md'</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-isAbsolute-path"><a href="#path-isAbsolute-path" class="headerlink" title="path.isAbsolute(path)"></a>path.isAbsolute(path)</h2><p><code>path.isAbsolute(path)</code>判断路径是否是绝对路径。</p>
+<p>注：对于系统来说，<code>/</code>是根目录，是绝对路径；对于网站来说，<code>/</code>是相对路径，相对于<code>locaiton.origin</code>，只有以 URL 协议名称打头的才是绝对路径。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：true</span></span><br><span class="line"><span class="built_in">console</span>.log(path.isAbsolute(<span class="string">'C:\\README.md'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出：true</span></span><br><span class="line"><span class="built_in">console</span>.log(path.isAbsolute(<span class="string">'/'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-join-…paths"><a href="#path-join-…paths" class="headerlink" title="path.join([…paths])"></a>path.join([…paths])</h2><p><code>path.join([...paths])</code>使用路径片段分隔符把所有的路径片段拼接在一起。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："C:\\path\\to\\dir\\README.md"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.join(<span class="string">'C:'</span>, <span class="string">'path'</span>, <span class="string">'to'</span>, <span class="string">'dir'</span>, <span class="string">'README.md'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-normalize-path"><a href="#path-normalize-path" class="headerlink" title="path.normalize(path)"></a>path.normalize(path)</h2><p><code>path.normalize(path)</code>返回标准化之后的路径。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："C:\\a"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.normalize(<span class="string">'C:\\a\\b\\..'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-parse-path"><a href="#path-parse-path" class="headerlink" title="path.parse(path)"></a>path.parse(path)</h2><p><code>path.parse(path)</code>用于路径解析。返回一个路径对象。</p>
+<p><code>path.parse(path)</code>和<code>path.format(pathObject)</code>互为逆运算。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(path.parse(<span class="string">'C:\\path\\to\\dir\\README.md'</span>));</span><br></pre></td></tr></table></figure>
+
+<p>以下是返回的路径对象的 JSON 格式：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"root"</span>: <span class="string">"C:\\"</span>,</span><br><span class="line">  <span class="attr">"dir"</span>: <span class="string">"C:\\path\\to\\dir"</span>,</span><br><span class="line">  <span class="attr">"base"</span>: <span class="string">"README.md"</span>,</span><br><span class="line">  <span class="attr">"ext"</span>: <span class="string">".md"</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"README"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-relative-from-to"><a href="#path-relative-from-to" class="headerlink" title="path.relative(from, to)"></a>path.relative(from, to)</h2><p><code>path.relative(from, to)</code>用于计算<code>to</code>相对于<code>from</code>的路径。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："..\\..\\impl\\bbb"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.relative(<span class="string">'C:\\orandea\\test\\aaa'</span>, <span class="string">'C:\\orandea\\impl\\bbb'</span>));</span><br></pre></td></tr></table></figure>
+
+<h2 id="path-resolve-…paths"><a href="#path-resolve-…paths" class="headerlink" title="path.resolve([…paths])"></a>path.resolve([…paths])</h2><p><code>path.resolve([...paths])</code>用于将多个路径片段解析为绝对路径。</p>
+<p><code>path.resolve([...paths])</code>从右到左进行拼接，直到得到一个绝对路径位置返回。如果到返回都没有得到绝对路径，则拼接 CWD 而后返回。</p>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出："D:\\README.md"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.resolve(<span class="string">'C:'</span>, <span class="string">'D:'</span>, <span class="string">'README.md'</span>));</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 若CWD为D:\，则输出："D:\\README.md"</span></span><br><span class="line"><span class="built_in">console</span>.log(path.resolve(<span class="string">'README.md'</span>));</span><br></pre></td></tr></table></figure>
+
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://nodejs.org/api/path.html" target="_blank" rel="noopener">path</a></li>
+</ul>
+
+        
+          <h1>
+  <a class="anti-copycat" href="https://jsweibo.github.io"
+    >本文作者: jsweibo</a
+  >
+</h1>
+<h1>
+  <a
+    class="anti-copycat"
+    href="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/"
+    title="nodejs中的path模块"
+  >
+    本文链接: https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/</a
+  >
+</h1>
+
+        
+        
+          <hr />
+          <section class="reward">
+  <h2>本文对你有帮助？请支持我</h2>
+  <hr />
+  <div class="reward-methods">
+    <figure>
+      <img class="alipay" src="/images/alipay.jpg" title="支付宝" />
+      <figcaption>支付宝</figcaption>
+    </figure>
+    <figure>
+      <img class="wechat" src="/images/wechat.jpg" title="微信" />
+      <figcaption>微信</figcaption>
+    </figure>
+  </div>
+</section>
+<style>
+  .reward-methods {
+    display: flex;
+  }
+  .reward-methods figcaption {
+    margin-top: 1em;
+    text-align: center;
+  }
+  @media screen and (max-width: 414px) {
+    .reward-methods {
+      flex-direction: column;
+    }
+    .reward > h2 {
+      font-size: 1.5em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .reward > h2 {
+      font-size: 1.3em;
+    }
+  }
+</style>
+
+        
+        
+          <hr />
+          <section>
+  <ul class="copyright">
+    <li class="author">
+      <strong>本文作者：</strong>
+      jsweibo
+    </li>
+    <li class="link">
+      <strong>本文链接：</strong>
+      <a href="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/" title="nodejs中的path模块"
+        >https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/</a
+      >
+    </li>
+    <li class="license">
+      <strong>版权声明：</strong>
+      除非另有说明，否则本网站上的内容根据<a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+        rel="external nofollow noopener noreferrer"
+        target="_blank"
+        >署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) </a
+      >进行许可。
+    </li>
+  </ul>
+</section>
+<style>
+  .copyright .link {
+    word-break: break-all;
+  }
+</style>
+
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/" data-id="cldqyv0wx01egrov64le8996h" class="article-share-link">分享</a>
+      
+        <a href="https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/#disqus_thread" class="article-comment-link">留言</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/23/bash%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%E6%89%A9%E5%B1%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          bash中的文件名扩展
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/21/%E4%BB%80%E4%B9%88%E6%98%AFcamelCase%E5%91%BD%E5%90%8D%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">什么是camelCase命名法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">48</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Cookie/">Cookie</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Headers/">Headers</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Methods/">Methods</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/StatusCode/">StatusCode</a><span class="category-list-count">13</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Server/Nginx/">Nginx</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/">Shell</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/Bash/">Bash</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/PowerShell/">PowerShell</a><span class="category-list-count">33</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/cmd/">cmd</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a><span class="category-list-count">71</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/">Browser</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/Headless/">Headless</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/IE/">IE</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/Opera/">Opera</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/%E5%8F%8C%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8/">双核浏览器</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Extension/">Extension</a><span class="category-list-count">36</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Extension/WebExtension/">WebExtension</a><span class="category-list-count">35</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E5%AE%89%E5%85%A8/">安全</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/Angular/">Angular</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/Vue/">Vue</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/">Wiki</a><span class="category-list-count">48</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/">IT</a><span class="category-list-count">46</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/">字符集</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Android/Software/">Software</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/">Linux</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/Software/">Software</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/Ubuntu/">Ubuntu</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/">Windows</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/Software/">Software</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/">硬件</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/%E7%94%B5%E8%A7%86%E6%9C%BA/">电视机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91/">笔记本电脑</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/">语言</a><span class="category-list-count">351</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/">CSS</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/At-rules/">At-rules</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/Pseudo-classes/">Pseudo-classes</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/Pseudo-elements/">Pseudo-elements</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/">HTML</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5/">HTML 5</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5-1/">HTML 5.1</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5-2/">HTML 5.2</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JSDoc/">JSDoc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JSON5/">JSON5</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/">JavaScript</a><span class="category-list-count">133</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Array/">Array</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/BigInt/">BigInt</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/CanvasRenderingContext2D/">CanvasRenderingContext2D</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/DocumentFragment/">DocumentFragment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Function/">Function</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/HTMLCollection/">HTMLCollection</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/HTMLElement/">HTMLElement</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Map/">Map</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Math/">Math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Navigator/">Navigator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/NodeList/">NodeList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Notification/">Notification</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Number/">Number</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/ParentNode/">ParentNode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Range/">Range</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Selection/">Selection</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Set/">Set</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/URL/">URL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/URLSearchParams/">URLSearchParams</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/XMLHttpRequest/">XMLHttpRequest</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/document/">document</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/history/">history</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/navigator/">navigator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/window/">window</a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/">库</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/jquery/">jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/lodash/">lodash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/prototype/">prototype</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/rxjs/">rxjs</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/underscore/">underscore</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/zepto/">zepto</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/">模块化方案</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/AMD/">AMD</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/CMD/">CMD</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/CommonJS/">CommonJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/UMD/">UMD</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Less/">Less</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SQL/">SQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SQL/MySQL/">MySQL</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SVG/">SVG</a><span class="category-list-count">32</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Sass/">Sass</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Stylus/">Stylus</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/YAML/">YAML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/">nodejs</a><span class="category-list-count">131</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/npm/">npm</a><span class="category-list-count">46</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/npx/">npx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/">库</a><span class="category-list-count">83</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/babel/">babel</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/browserslist/">browserslist</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/ejs/">ejs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/eslint/">eslint</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/grunt/">grunt</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/gulp/">gulp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/n/">n</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/nodemon/">nodemon</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/pm2/">pm2</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/postcss/">postcss</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/prettier/">prettier</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/webpack/">webpack</a><span class="category-list-count">39</span></li></ul></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">29</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">28</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">22</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/15/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/">什么是可执行文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E4%BB%80%E4%B9%88%E6%98%AFDLNA/">什么是DLNA</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/13/%E4%BB%80%E4%B9%88%E6%98%AFrobots-txt/">什么是robots.txt</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/12/%E4%BB%80%E4%B9%88%E6%98%AFShebang/">什么是Shebang</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/11/%E4%BB%80%E4%B9%88%E6%98%AFemoji/">什么是emoji</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 jsweibo<br>
+      Powered by <a href="http://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/shame" class="mobile-nav-link">耻辱榜</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jsweibo';
+  
+  var disqus_url = 'https://jsweibo.github.io/2019/05/22/nodejs%E4%B8%AD%E7%9A%84path%E6%A8%A1%E5%9D%97/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

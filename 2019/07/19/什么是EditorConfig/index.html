@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+<!-- Baidu Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.async = true;
+    hm.src = "https://hm.baidu.com/hm.js?da6d57a7f22eab05b99fae5cc3f999ee";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+<!-- End Baidu Analytics -->
+
+
+  
+  <title>什么是EditorConfig | jsweibo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="摘要本文主要讲述了：  什么是 EditorConfig 运行时间 配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是EditorConfig">
+<meta property="og:url" content="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/index.html">
+<meta property="og:site_name" content="jsweibo">
+<meta property="og:description" content="摘要本文主要讲述了：  什么是 EditorConfig 运行时间 配置">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-19T11:52:57.000Z">
+<meta property="article:modified_time" content="2022-07-23T03:49:05.030Z">
+<meta property="article:author" content="jsweibo">
+<meta property="article:tag" content="jsweibo的博客">
+<meta property="article:tag" content="jsweibo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="jsweibo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">jsweibo</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">言者所以在意，得意而忘言</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/shame">耻辱榜</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://jsweibo.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-什么是EditorConfig" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/" class="article-date">
+  <time datetime="2019-07-19T11:52:57.000Z" itemprop="datePublished">2019-07-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a>►<a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/">Windows</a>►<a class="article-category-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/Software/">Software</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      什么是EditorConfig
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          <nav>
+            <h2>目录</h2>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#摘要"><span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#正文"><span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是-EditorConfig"><span class="toc-text">什么是 EditorConfig</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运行时间"><span class="toc-text">运行时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文件名"><span class="toc-text">文件名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编码"><span class="toc-text">编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置文件查询"><span class="toc-text">配置文件查询</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#层叠配置优先级"><span class="toc-text">层叠配置优先级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#行注释"><span class="toc-text">行注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#路径段分隔符"><span class="toc-text">路径段分隔符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通配符"><span class="toc-text">通配符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性"><span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#root"><span class="toc-text">root</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#end-of-line"><span class="toc-text">end_of_line</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#insert-final-newline"><span class="toc-text">insert_final_newline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#indent-style"><span class="toc-text">indent_style</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#indent-size"><span class="toc-text">indent_size</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tab-width"><span class="toc-text">tab_width</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#trim-trailing-whitespace"><span class="toc-text">trim_trailing_whitespace</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考资料"><span class="toc-text">参考资料</span></a></li></ol>
+          </nav>
+          <hr />
+        
+        
+          <h1>
+  <a class="anti-copycat" href="https://jsweibo.github.io"
+    >本文作者: jsweibo</a
+  >
+</h1>
+<h1>
+  <a
+    class="anti-copycat"
+    href="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/"
+    title="什么是EditorConfig"
+  >
+    本文链接: https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/</a
+  >
+</h1>
+
+        
+        <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p>
+<ol>
+<li>什么是 EditorConfig</li>
+<li>运行时间</li>
+<li>配置</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-EditorConfig"><a href="#什么是-EditorConfig" class="headerlink" title="什么是 EditorConfig"></a>什么是 EditorConfig</h2><p>每个开发者都有自己的代码风格。例如：</p>
+<ul>
+<li>用<code>tab</code>缩进而不用<code>space</code></li>
+<li>每个<code>tab</code>缩进<code>4</code>列</li>
+<li>使用新行作为文件的结束</li>
+</ul>
+<p>当多个开发者共同维护同一个项目时，保持代码风格统一是非常重要的。</p>
+<p>EditorConfig 是一个用于维护代码风格的跨编辑器的插件。</p>
+<h2 id="运行时间"><a href="#运行时间" class="headerlink" title="运行时间"></a>运行时间</h2><p>用户保存文件时</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="文件名"><a href="#文件名" class="headerlink" title="文件名"></a>文件名</h3><p><code>.editorconfig</code></p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p><code>UTF-8</code></p>
+<h3 id="配置文件查询"><a href="#配置文件查询" class="headerlink" title="配置文件查询"></a>配置文件查询</h3><p>每当打开文件时，插件会从文件所在目录开始并逐级向上寻找<code>.editorconfig</code>。</p>
+<p>直到某个配置文件的<code>root</code>属性为<code>true</code>或已经到达根目录时，才会停止。</p>
+<h3 id="层叠配置优先级"><a href="#层叠配置优先级" class="headerlink" title="层叠配置优先级"></a>层叠配置优先级</h3><p>当上级目录也存在配置文件且 CWD 的配置文件的<code>root</code>属性不为<code>true</code>时，插件会对多个配置文件进行层叠。</p>
+<p>和被打开文件距离越短的配置文件的优先级越高，当多个配置文件冲突时，以优先级高的为准。</p>
+<p>示例：</p>
+<p>当打开<code>learn_editorconfig/src/index.js</code>时，<code>learn_editorconfig/src/.editorconfig</code>的优先级比<code>learn_editorconfig/.editorconfig</code>要高。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">; learn_editorconfig/src/.editorconfig</span></span><br><span class="line"><span class="section">[*]</span></span><br><span class="line"><span class="attr">insert_final_newline</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">4</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">; learn_editorconfig/.editorconfig</span></span><br><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[*]</span></span><br><span class="line"><span class="attr">insert_final_newline</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br></pre></td></tr></table></figure>
+
+<p>此时，最终有效的<code>.editorconfig</code>为：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[*]</span></span><br><span class="line"><span class="attr">insert_final_newline</span> = <span class="literal">false</span></span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">4</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br></pre></td></tr></table></figure>
+
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><code>.editorconfig</code>使用<code>ini</code>语法。但允许在章节名中使用<code>[</code>和<code>]</code>。</p>
+<h4 id="行注释"><a href="#行注释" class="headerlink" title="行注释"></a>行注释</h4><p>示例：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 我是行注释</span></span><br><span class="line"><span class="comment">; 我是行注释</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="路径段分隔符"><a href="#路径段分隔符" class="headerlink" title="路径段分隔符"></a>路径段分隔符</h4><p><code>/</code>，注意不是<code>\</code></p>
+<h4 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h4><ul>
+<li><code>*</code> 匹配字符串中的所有字符，除了<code>/</code></li>
+<li><code>**</code> 匹配字符串中的所有字符，包括<code>/</code></li>
+<li><code>?</code> 匹配字符串中的一个字符</li>
+<li><code>[name]</code> 匹配集合中的一个字符，例如：<code>[a-z]</code>匹配任意一个小写的英文字母</li>
+<li><code>[!name]</code> 不匹配集合中的一个字符，例如：<code>[!a-z]</code>不匹配任意一个小写的英文字母</li>
+<li><code>{s1,s2,s3}</code> 匹配给定的任意一个字符（由逗号分隔），例如：<code>a{1,2,3}b</code>匹配<code>a1b</code>、<code>a2b</code>、<code>a3b</code></li>
+<li><code>{num1..num2}</code> 匹配整数 num1 -&gt; 整数 num2 的闭区间，例如：<code>{0..9}</code>相当于<code>[0-9]</code></li>
+</ul>
+<p>以上的特殊字符可以使用<code>\</code>进行转义，这样它们就不会被视作通配符。</p>
+<p>注意：</p>
+<ol>
+<li>若 pattern 为<code>*</code>，匹配工作是在目标文件所在目录进行的，而非<code>.editorconfig</code>文件所在目录</li>
+<li>若 pattern 包含<code>/</code>，匹配工作在<code>.editorconfig</code>文件所在目录进行的</li>
+</ol>
+<p>示例：</p>
+<p><code>/home/jsweibo/learn_editorconfig/.editorconfig</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[*]</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/foo/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/foo/*.js</code></li>
+</ul>
+<p>示例：</p>
+<p><code>/home/jsweibo/learn_editorconfig/.editorconfig</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[/*]</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/foo/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/foo/*.js</code></li>
+</ul>
+<p>示例：</p>
+<p><code>/home/jsweibo/learn_editorconfig/.editorconfig</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[src/*]</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/foo/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/foo/*.js</code></li>
+</ul>
+<p>示例：</p>
+<p><code>/home/jsweibo/learn_editorconfig/.editorconfig</code></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">root</span> = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="section">[src/**]</span></span><br><span class="line"><span class="attr">indent_style</span> = space</span><br><span class="line"><span class="attr">indent_size</span> = <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/*.js</code></li>
+<li><input checked="" disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/src/foo/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/*.js</code></li>
+<li><input disabled="" type="checkbox"> <code>/home/jsweibo/learn_editorconfig/public/src/foo/*.js</code></li>
+</ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h4 id="root"><a href="#root" class="headerlink" title="root"></a>root</h4><p>停止继续向上寻找<code>.editorconfig</code>文件</p>
+<h4 id="end-of-line"><a href="#end-of-line" class="headerlink" title="end_of_line"></a>end_of_line</h4><p>行尾符</p>
+<h4 id="insert-final-newline"><a href="#insert-final-newline" class="headerlink" title="insert_final_newline"></a>insert_final_newline</h4><p>以空行作为文件的结尾</p>
+<h4 id="indent-style"><a href="#indent-style" class="headerlink" title="indent_style"></a>indent_style</h4><p>缩进风格</p>
+<h4 id="indent-size"><a href="#indent-size" class="headerlink" title="indent_size"></a>indent_size</h4><p>缩进大小</p>
+<h4 id="tab-width"><a href="#tab-width" class="headerlink" title="tab_width"></a>tab_width</h4><p>tab 宽度</p>
+<h4 id="trim-trailing-whitespace"><a href="#trim-trailing-whitespace" class="headerlink" title="trim_trailing_whitespace"></a>trim_trailing_whitespace</h4><p>去除尾部的空白字符</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a href="https://github.com/editorconfig/editorconfig" target="_blank" rel="noopener">editorconfig</a></li>
+<li><a href="https://github.com/editorconfig/editorconfig/issues/283#issuecomment-265905621" target="_blank" rel="noopener">283#issuecomment-265905621</a></li>
+<li><a href="https://github.com/editorconfig/editorconfig/issues/17" target="_blank" rel="noopener">Add documentation for / usage in section names</a></li>
+</ul>
+
+        
+          <h1>
+  <a class="anti-copycat" href="https://jsweibo.github.io"
+    >本文作者: jsweibo</a
+  >
+</h1>
+<h1>
+  <a
+    class="anti-copycat"
+    href="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/"
+    title="什么是EditorConfig"
+  >
+    本文链接: https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/</a
+  >
+</h1>
+
+        
+        
+          <hr />
+          <section class="reward">
+  <h2>本文对你有帮助？请支持我</h2>
+  <hr />
+  <div class="reward-methods">
+    <figure>
+      <img class="alipay" src="/images/alipay.jpg" title="支付宝" />
+      <figcaption>支付宝</figcaption>
+    </figure>
+    <figure>
+      <img class="wechat" src="/images/wechat.jpg" title="微信" />
+      <figcaption>微信</figcaption>
+    </figure>
+  </div>
+</section>
+<style>
+  .reward-methods {
+    display: flex;
+  }
+  .reward-methods figcaption {
+    margin-top: 1em;
+    text-align: center;
+  }
+  @media screen and (max-width: 414px) {
+    .reward-methods {
+      flex-direction: column;
+    }
+    .reward > h2 {
+      font-size: 1.5em;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .reward > h2 {
+      font-size: 1.3em;
+    }
+  }
+</style>
+
+        
+        
+          <hr />
+          <section>
+  <ul class="copyright">
+    <li class="author">
+      <strong>本文作者：</strong>
+      jsweibo
+    </li>
+    <li class="link">
+      <strong>本文链接：</strong>
+      <a href="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/" title="什么是EditorConfig"
+        >https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/</a
+      >
+    </li>
+    <li class="license">
+      <strong>版权声明：</strong>
+      除非另有说明，否则本网站上的内容根据<a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+        rel="external nofollow noopener noreferrer"
+        target="_blank"
+        >署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) </a
+      >进行许可。
+    </li>
+  </ul>
+</section>
+<style>
+  .copyright .link {
+    word-break: break-all;
+  }
+</style>
+
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/" data-id="cldqyv0zw01htrov6412a3opf" class="article-share-link">分享</a>
+      
+        <a href="https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/#disqus_thread" class="article-comment-link">留言</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/20/%E5%A6%82%E4%BD%95%E5%9C%A8RequireJS%E4%B8%AD%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9D%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          如何在RequireJS中定义模块
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/18/%E4%BB%80%E4%B9%88%E6%98%AFCMD/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">什么是CMD</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Demo/">Demo</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/">HTTP</a><span class="category-list-count">48</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/CORS/">CORS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Cookie/">Cookie</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Headers/">Headers</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/Methods/">Methods</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTTP/StatusCode/">StatusCode</a><span class="category-list-count">13</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Server/">Server</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Server/Nginx/">Nginx</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/">Shell</a><span class="category-list-count">42</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/Bash/">Bash</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/PowerShell/">PowerShell</a><span class="category-list-count">33</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/cmd/">cmd</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/">Web前端</a><span class="category-list-count">71</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/">Browser</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/Headless/">Headless</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/IE/">IE</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/Opera/">Opera</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Browser/%E5%8F%8C%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8/">双核浏览器</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Extension/">Extension</a><span class="category-list-count">36</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/Extension/WebExtension/">WebExtension</a><span class="category-list-count">35</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E5%AE%89%E5%85%A8/">安全</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/">框架</a><span class="category-list-count">16</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/Angular/">Angular</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/React/">React</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E5%89%8D%E7%AB%AF/%E6%A1%86%E6%9E%B6/Vue/">Vue</a><span class="category-list-count">3</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/">Wiki</a><span class="category-list-count">48</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/">IT</a><span class="category-list-count">46</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/">字符集</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Wiki/IT/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a><span class="category-list-count">2</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Android/Software/">Software</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/">Linux</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/Software/">Software</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Linux/Ubuntu/">Ubuntu</a><span class="category-list-count">5</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/">Windows</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/Windows/Software/">Software</a><span class="category-list-count">4</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/">硬件</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/%E7%94%B5%E8%A7%86%E6%9C%BA/">电视机</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A1%AC%E4%BB%B6/%E7%AC%94%E8%AE%B0%E6%9C%AC%E7%94%B5%E8%84%91/">笔记本电脑</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/">语言</a><span class="category-list-count">351</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/">CSS</a><span class="category-list-count">23</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/At-rules/">At-rules</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/Pseudo-classes/">Pseudo-classes</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/CSS/Pseudo-elements/">Pseudo-elements</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/">HTML</a><span class="category-list-count">18</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5/">HTML 5</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5-1/">HTML 5.1</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/HTML/HTML-5-2/">HTML 5.2</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JSDoc/">JSDoc</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JSON5/">JSON5</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/">JavaScript</a><span class="category-list-count">133</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Array/">Array</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/BigInt/">BigInt</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/CanvasRenderingContext2D/">CanvasRenderingContext2D</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/DocumentFragment/">DocumentFragment</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Function/">Function</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/HTMLCollection/">HTMLCollection</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/HTMLElement/">HTMLElement</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Map/">Map</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Math/">Math</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Navigator/">Navigator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Node/">Node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/NodeList/">NodeList</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Notification/">Notification</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Number/">Number</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/ParentNode/">ParentNode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Range/">Range</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Selection/">Selection</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/Set/">Set</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/URL/">URL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/URLSearchParams/">URLSearchParams</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/XMLHttpRequest/">XMLHttpRequest</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/document/">document</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/history/">history</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/navigator/">navigator</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/window/">window</a><span class="category-list-count">26</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/">库</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/jquery/">jquery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/lodash/">lodash</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/prototype/">prototype</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/rxjs/">rxjs</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/underscore/">underscore</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E5%BA%93/zepto/">zepto</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/">模块化方案</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/AMD/">AMD</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/CMD/">CMD</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/CommonJS/">CommonJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/JavaScript/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%96%B9%E6%A1%88/UMD/">UMD</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Less/">Less</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SQL/">SQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SQL/MySQL/">MySQL</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/SVG/">SVG</a><span class="category-list-count">32</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Sass/">Sass</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/Stylus/">Stylus</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/TypeScript/">TypeScript</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/YAML/">YAML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/">nodejs</a><span class="category-list-count">131</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/npm/">npm</a><span class="category-list-count">46</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/npx/">npx</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/">库</a><span class="category-list-count">83</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/babel/">babel</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/browserslist/">browserslist</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/ejs/">ejs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/eslint/">eslint</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/grunt/">grunt</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/gulp/">gulp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/hexo/">hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/n/">n</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/nodemon/">nodemon</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/pm2/">pm2</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/postcss/">postcss</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/prettier/">prettier</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%AD%E8%A8%80/nodejs/%E5%BA%93/webpack/">webpack</a><span class="category-list-count">39</span></li></ul></li></ul></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">三月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">29</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">九月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">七月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">三月 2019</a><span class="archive-list-count">31</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a><span class="archive-list-count">28</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a><span class="archive-list-count">22</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/15/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/">什么是可执行文件</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E4%BB%80%E4%B9%88%E6%98%AFDLNA/">什么是DLNA</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/13/%E4%BB%80%E4%B9%88%E6%98%AFrobots-txt/">什么是robots.txt</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/12/%E4%BB%80%E4%B9%88%E6%98%AFShebang/">什么是Shebang</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/11/%E4%BB%80%E4%B9%88%E6%98%AFemoji/">什么是emoji</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 jsweibo<br>
+      Powered by <a href="http://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/shame" class="mobile-nav-link">耻辱榜</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'jsweibo';
+  
+  var disqus_url = 'https://jsweibo.github.io/2019/07/19/%E4%BB%80%E4%B9%88%E6%98%AFEditorConfig/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>jsweibo</title>
+  
+  <subtitle>言者所以在意，得意而忘言</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jsweibo.github.io/"/>
+  <updated>2022-02-28T03:55:02.095Z</updated>
+  <id>https://jsweibo.github.io/</id>
+  
+  <author>
+    <name>jsweibo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是可执行文件</title>
+    <link href="https://jsweibo.github.io/2020/08/15/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/"/>
+    <id>https://jsweibo.github.io/2020/08/15/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6/</id>
+    <published>2020-08-15T13:01:11.000Z</published>
+    <updated>2022-02-28T03:55:02.095Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是可执行文件</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是可执行文件"><a href="#什么是可执行文件" class="headerlink" title="什么是可执行文件"></a>什么是可执行文件</h2><p>内含编码指令的，能使计算机完成指定任务的文件。</p><p>根据所包含的编码指令的不同，可执行文件可以分为 3 类：</p><ul><li>机器码 例如：<code>.exe</code>（应用程序）</li><li>字节码 例如：<code>.pyc</code>（Compiled Python File）</li><li>脚本语言 例如：<code>.sh</code>（Shell Script）、<code>.ps1</code>（Windows PowerShell 脚本）、<code>.js</code>（JavaScript 文件）、<code>.py</code>（Python File）</li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Executable" target="_blank" rel="noopener">Executable</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是可执行文件&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是DLNA</title>
+    <link href="https://jsweibo.github.io/2020/08/14/%E4%BB%80%E4%B9%88%E6%98%AFDLNA/"/>
+    <id>https://jsweibo.github.io/2020/08/14/%E4%BB%80%E4%B9%88%E6%98%AFDLNA/</id>
+    <published>2020-08-14T12:57:29.000Z</published>
+    <updated>2022-02-28T03:54:45.556Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 DLNA</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-DLNA"><a href="#什么是-DLNA" class="headerlink" title="什么是 DLNA"></a>什么是 DLNA</h2><p>全称为”Digital Living Network Alliance”，中文意为数字生活网络联盟。</p><p>该组织创立于 2003 年 6 月，于 2017 年 1 月 5 日宣布解散。</p><p>该组织的目标是提供一套不同设备间共享多媒体文件的解决方案。例如：把手机上正在播放的视频一键投屏到电视上继续播放</p><p>设备类型：</p><ul><li>Digital Media Server (DMS) 存储多媒体文件，供 DMP 和 DMR 使用</li><li>Digital Media Player (DMP) 主动查找并播放 DMS 上的文件</li><li>Digital Media Controller (DMC) 主动查找 DMS 上的文件，供 DMR 播放</li><li>Digital Media Renderer (DMR) 被动播放 DMC 推送过来的文件</li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Digital_Living_Network_Alliance" target="_blank" rel="noopener">Digital_Living_Network_Alliance</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 DLNA&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是robots.txt</title>
+    <link href="https://jsweibo.github.io/2020/08/13/%E4%BB%80%E4%B9%88%E6%98%AFrobots-txt/"/>
+    <id>https://jsweibo.github.io/2020/08/13/%E4%BB%80%E4%B9%88%E6%98%AFrobots-txt/</id>
+    <published>2020-08-13T14:31:52.000Z</published>
+    <updated>2022-07-07T00:25:17.291Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li><li>局限性</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>置于域名根目录下的一个纯文本文件，用于允许或禁止机器人（比如：爬虫）访问指定文件或目录</p><p>示例：禁止任何机器人访问任何文件或目录（除<code>/robots.txt</code>之外）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: &#x2F;</span><br></pre></td></tr></table></figure><p>示例：禁止任何机器人访问<code>/foo/</code>和<code>/bar/index.html</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">User-agent: *</span><br><span class="line">Disallow: &#x2F;foo&#x2F;</span><br><span class="line">Disallow: &#x2F;bar&#x2F;index.html</span><br></pre></td></tr></table></figure><p>示例：禁止除<code>Googlebot</code>外的任何机器人，访问任何文件或目录（除<code>/robots.txt</code>之外）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User-agent: Googlebot</span><br><span class="line">Disallow:</span><br><span class="line"></span><br><span class="line">User-agent: *</span><br><span class="line">Disallow: &#x2F;</span><br></pre></td></tr></table></figure><p>示例：禁止<code>Googlebot</code>访问<code>/foo/</code>和<code>/bar/index.html</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">User-agent: Googlebot</span><br><span class="line">Disallow: &#x2F;foo&#x2F;</span><br><span class="line">Disallow: &#x2F;bar&#x2F;index.html</span><br></pre></td></tr></table></figure><h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>仅是一个君子协定</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://www.robotstxt.org/robotstxt.html" target="_blank" rel="noopener">robotstxt</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;li&gt;局限性&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是Shebang</title>
+    <link href="https://jsweibo.github.io/2020/08/12/%E4%BB%80%E4%B9%88%E6%98%AFShebang/"/>
+    <id>https://jsweibo.github.io/2020/08/12/%E4%BB%80%E4%B9%88%E6%98%AFShebang/</id>
+    <published>2020-08-12T14:45:48.000Z</published>
+    <updated>2022-02-28T03:54:08.520Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 Shebang</li><li>作用</li><li>可移植性</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-Shebang"><a href="#什么是-Shebang" class="headerlink" title="什么是 Shebang"></a>什么是 Shebang</h2><p>在英语中，<code>#</code>读作 hash、sharp、<code>!</code>读作 bang</p><p><code>shebang</code>有时也被称作<code>hashbang</code>、<code>sha-bang</code></p><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>用于指定脚本的执行程序</p><p>语法：<code>#!interpreter [optional-arg]</code></p><p>注：</p><ol><li><code>interpreter</code>为执行程序的绝对路径</li><li><code>optional-arg</code>为执行程序的参数列表</li></ol><p>示例：使用<code>bash</code>执行该脚本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> 123</span><br></pre></td></tr></table></figure><h2 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h2><p>并不是所有系统都会把同一个执行程序放在相同的位置</p><p>可以通过间接调用来解决这个问题</p><p>示例：<code>env</code>程序将使用从<code>$PATH</code>中找到的第一个<code>bash</code>来运行该脚本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> 123;</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" target="_blank" rel="noopener">Shebang_(Unix)</a></li><li><a href="https://www.gnu.org/software/coreutils/manual/html_node/env-invocation.html#env-invocation" target="_blank" rel="noopener">env-invocation</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 Shebang&lt;/li&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;li&gt;可移植性&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是emoji</title>
+    <link href="https://jsweibo.github.io/2020/08/11/%E4%BB%80%E4%B9%88%E6%98%AFemoji/"/>
+    <id>https://jsweibo.github.io/2020/08/11/%E4%BB%80%E4%B9%88%E6%98%AFemoji/</id>
+    <published>2020-08-11T15:17:22.000Z</published>
+    <updated>2022-02-28T03:53:51.394Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 emoji</li><li>谁发明了 emoji</li><li>被纳入 Unicode</li><li>emoji 1.0</li><li>零宽度连接符</li><li>变体选择符-16</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-emoji"><a href="#什么是-emoji" class="headerlink" title="什么是 emoji"></a>什么是 emoji</h2><p>emoji (<code>/ɪˈmoʊdʒiː/</code>)，中文名称为绘文字。例如：<code>😂</code></p><h2 id="谁发明了-emoji"><a href="#谁发明了-emoji" class="headerlink" title="谁发明了 emoji"></a>谁发明了 emoji</h2><p>此前，日本人栗田穰崇曾被广泛认为于 1999 年发明了 emoji（绘文字）</p><p>但根据最新的考据，<a href="https://blog.emojipedia.org/correcting-the-record-on-the-first-emoji-set/" target="_blank" rel="noopener">一组更早的 emoji 被发现</a>，它由日本软银公司的佚名设计师于 1997 年设计</p><h2 id="被纳入-Unicode"><a href="#被纳入-Unicode" class="headerlink" title="被纳入 Unicode"></a>被纳入 Unicode</h2><p>2010 年 10 月发布的 Unicode 6.0 正式为 emoji 分配了码点</p><p>值得一提的是，Unicode 只是规定了 emoji 的码点和 emoji 的语义，并没有规定 emoji 的样式，因此，各大平台的 emoji 表情很有可能是不同的</p><h2 id="emoji-1-0"><a href="#emoji-1-0" class="headerlink" title="emoji 1.0"></a>emoji 1.0</h2><p>2015 年 8 月，Unicode 将此前发布的 Unicode 标准中和 emoji 有关的字符统一辑录，发布了 emoji 1.0 标准</p><p>emoji 1.0 标准甚至追封了 1993 年发布的 Unicode 1.1 标准中的部分字符（例如：<code>☺️</code> <code>U+263A</code>、<code>☹</code> <code>U+2639</code>、<code>✂</code> <code>U+2702</code>等），给这些字符赋予了 emoji 语义</p><h2 id="零宽度连接符"><a href="#零宽度连接符" class="headerlink" title="零宽度连接符"></a>零宽度连接符</h2><p>2018 年发布的 emoji 11.0 标准追封了 1993 年发布的 Unicode 1.1 标准中的零宽度连接符（简称为 ZWJ，<code>U+200D</code>）为 emoji</p><p>作用：将几个 emoji 拼接成一个全新的 emoji</p><p>示例：</p><ul><li><code>U+1F466</code>表示<code>👦</code>（男孩）</li><li><code>U+1F467</code>表示<code>👧</code>（女孩）</li><li><code>U+1F468</code>表示<code>👨</code>（男人）</li><li><code>U+1F469</code>表示<code>👩</code>（女人）</li><li><code>U+1F466 U+200D U+1F469 U+200D U+1F466 U+200D U+1F467</code>表示<code>👨‍👩‍👦‍👧</code>（一家四口）</li></ul><h2 id="变体选择符-16"><a href="#变体选择符-16" class="headerlink" title="变体选择符-16"></a>变体选择符-16</h2><p>2018 年发布的 emoji 11.0 标准追封了 2002 年发布的 Unicode 3.2 标准中的变体选择符-16（<code>U+FE0F</code>）为 emoji</p><p>作用：当某个 Unicode 字符同时具备文字和 emoji 两种表现形式时，默认会采用文字形式（黑白）表现，但若其后存在变体选择符-16，则表示应采用 emoji 形式（彩色）表现</p><p>示例：</p><ul><li><code>U+2603</code>表示<code>☃</code>（雪人）</li><li><code>U+2603 U+FE0F</code>表示<code>☃️</code></li><li><code>U+2764</code>表示<code>❤</code>（黑色的心形图案）</li><li><code>U+2764 U+FE0F</code>表示<code>❤️</code></li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://blog.emojipedia.org/correcting-the-record-on-the-first-emoji-set/" target="_blank" rel="noopener">correcting-the-record-on-the-first-emoji-set</a></li><li><a href="https://emojipedia.org/unicode-6.0/" target="_blank" rel="noopener">unicode-6.0</a></li><li><a href="https://emojipedia.org/emoji-1.0/" target="_blank" rel="noopener">emoji-1.0</a></li><li><a href="https://unicode.org/Public/emoji/1.0/emoji-data.txt" target="_blank" rel="noopener">emoji-1.0</a></li><li><a href="https://emojipedia.org/unicode-1.1/" target="_blank" rel="noopener">unicode-1.1</a></li><li><a href="https://emojipedia.org/smiling-face/" target="_blank" rel="noopener">smiling-face</a></li><li><a href="https://emojipedia.org/frowning-face/" target="_blank" rel="noopener">frowning-face</a></li><li><a href="https://emojipedia.org/emoji-11.0/" target="_blank" rel="noopener">emoji-11.0</a></li><li><a href="https://unicode-table.com/en/200D/" target="_blank" rel="noopener">zero-width-joiner</a></li><li><a href="https://emojipedia.org/zero-width-joiner/" target="_blank" rel="noopener">zero-width-joiner</a></li><li><a href="https://unicode-table.com/en/FE0F/" target="_blank" rel="noopener">variation-selector-16</a></li><li><a href="https://emojipedia.org/variation-selector-16/" target="_blank" rel="noopener">variation-selector-16</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 emoji&lt;/li&gt;
+&lt;li&gt;谁发明了 emoji&lt;/li&gt;
+&lt;li&gt;被纳入 Unicode&lt;/li&gt;
+&lt;li&gt;emoji 1.0&lt;/li&gt;
+&lt;li&gt;零宽度连接符&lt;/li&gt;
+&lt;li&gt;变体选择符-16&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是Unicode</title>
+    <link href="https://jsweibo.github.io/2020/08/10/%E4%BB%80%E4%B9%88%E6%98%AFUnicode/"/>
+    <id>https://jsweibo.github.io/2020/08/10/%E4%BB%80%E4%B9%88%E6%98%AFUnicode/</id>
+    <published>2020-08-10T13:52:09.000Z</published>
+    <updated>2022-02-28T03:53:29.447Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 Unicode</li><li>字符集</li><li>字符编码方案</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-Unicode"><a href="#什么是-Unicode" class="headerlink" title="什么是 Unicode"></a>什么是 Unicode</h2><p>Unicode，中文意为统一码。</p><p>Unicode 是计算机科学领域的一项国际标准，它包括字符集和字符编码方案。Unicode 由 Unicode 委员会进行维护。</p><p>Unicode 委员会的目的是创建一个涵盖古今中外所有书写系统中的所有字符的字符集，并以其字符集和字符编码方案替代各个国家地区所使用的互不兼容的字符集和字符编码方案。</p><h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><p>Unicode 字符集在<code>[U+0000, U+10FFFF]</code>范围内为每一个字符分配唯一的 Unicode 码点。例如：<code>中</code>的 Unicode 码点为<code>U+4E2D</code></p><p><code>[U+0000, U+10FFFF]</code>可划分为 17 个平面：</p><ul><li><code>[U+0000, U+FFFF]</code> <code>0</code>号平面 BMP 基本多文种平面</li><li><code>[U+10000, U+1FFFF]</code> <code>1</code>号平面</li><li><code>[U+20000, U+2FFFF]</code> <code>2</code>号平面</li><li><code>[U+30000, U+3FFFF]</code> <code>3</code>号平面</li><li>…</li><li><code>[U+F0000, U+FFFFF]</code> <code>15</code>号平面</li><li><code>[U+100000, U+10FFFF]</code> <code>16</code>号平面</li></ul><p>每个平面可以编码 65536 个字符</p><h2 id="字符编码方案"><a href="#字符编码方案" class="headerlink" title="字符编码方案"></a>字符编码方案</h2><p>Unicode 字符集可以通过不同的字符编码方案来实现。这些字符编码方案被称作 Unicode Transformation Format（Unicode 转换格式），简称为<code>UTF</code>。例如：<code>UTF-8</code>、<code>UTF-16</code>、<code>UTF-32</code></p><p>示例：</p><ul><li><code>中</code>的 Unicode 码点为<code>U+4E2D</code></li><li><code>中</code>的 UTF-8 的十六进制编码为<code>E4 B8 AD</code></li><li><code>中</code>的 UTF-16BE 的十六进制编码为<code>4E 2D</code></li><li><code>中</code>的 UTF-16LE 的十六进制编码为<code>2D 4E</code></li><li><code>中</code>的 UTF-32BE 的十六进制编码为<code>00 00 4E 2D</code></li><li><code>中</code>的 UTF-32LE 的十六进制编码为<code>2D 4E 00 00</code></li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Unicode" target="_blank" rel="noopener">Unicode</a></li><li><a href="https://home.unicode.org/basic-info/faq/" target="_blank" rel="noopener">FAQ</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 Unicode&lt;/li&gt;
+&lt;li&gt;字符集&lt;/li&gt;
+&lt;li&gt;字符编码方案&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是favicon</title>
+    <link href="https://jsweibo.github.io/2020/08/09/%E4%BB%80%E4%B9%88%E6%98%AFfavicon/"/>
+    <id>https://jsweibo.github.io/2020/08/09/%E4%BB%80%E4%B9%88%E6%98%AFfavicon/</id>
+    <published>2020-08-09T14:02:39.000Z</published>
+    <updated>2022-02-28T03:53:14.283Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 favicon</li><li>作用</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-favicon"><a href="#什么是-favicon" class="headerlink" title="什么是 favicon"></a>什么是 favicon</h2><p>favicon（读音：<code>/ˈfævɪkɒn/</code>或<code>/ˈfeɪvɪkɒn/</code>）</p><p>文件扩展名：</p><ul><li><code>.gif</code></li><li><code>.ico</code></li><li><code>.png</code></li></ul><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>示例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"icon"</span> <span class="attr">href</span>=<span class="string">"favicon.ico"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>hello, world<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Favicon" target="_blank" rel="noopener">Favicon</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Favicon" target="_blank" rel="noopener">Favicon</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 favicon&lt;/li&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Web前端" scheme="https://jsweibo.github.io/categories/Web%E5%89%8D%E7%AB%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是Windows-1252编码</title>
+    <link href="https://jsweibo.github.io/2020/08/08/%E4%BB%80%E4%B9%88%E6%98%AFWindows-1252%E7%BC%96%E7%A0%81/"/>
+    <id>https://jsweibo.github.io/2020/08/08/%E4%BB%80%E4%B9%88%E6%98%AFWindows-1252%E7%BC%96%E7%A0%81/</id>
+    <published>2020-08-08T14:53:30.000Z</published>
+    <updated>2022-11-16T08:24:02.201Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 Windows-1252 编码</li><li>字符编码方案</li><li>和 ISO-8859-1 编码的关系</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-Windows-1252-编码"><a href="#什么是-Windows-1252-编码" class="headerlink" title="什么是 Windows-1252 编码"></a>什么是 Windows-1252 编码</h2><p>又名<code>CP-1252</code></p><p><code>Windows-1252</code>是<code>ASCII</code>的真超集</p><h2 id="字符编码方案"><a href="#字符编码方案" class="headerlink" title="字符编码方案"></a>字符编码方案</h2><p><code>Windows-1252</code>既是字符集，也是字符编码方案。</p><p>使用<code>8</code>个二进制位进行编码，共编码了<code>256</code>个字符</p><h2 id="和-ISO-8859-1-编码的关系"><a href="#和-ISO-8859-1-编码的关系" class="headerlink" title="和 ISO-8859-1 编码的关系"></a>和 ISO-8859-1 编码的关系</h2><p><code>Windows-1252</code>晚于<code>ISO-8859-1</code>诞生，除了<code>[0x80, 0x9F]</code>之外，<code>Windows-1252</code>向后兼容<code>ISO-8859-1</code></p><p>示例：</p><ul><li><code>ISO-8859-1</code>没有定义<code>[0x00, 0x1F]</code>、<code>[0x7F, 0x9F]</code></li><li><code>Windows-1252</code>定义了<code>[0x00, 0x1F]</code>、<code>[0x7F, 0x9F]</code></li><li><code>ISO-8859-1</code>的<code>0x80</code>位分配给了控制字符</li><li><code>Windows-1252</code>的<code>0x80</code>位分配给了欧元符号<code>€</code></li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1" target="_blank" rel="noopener">IEC_8859-1</a></li><li><a href="https://en.wikipedia.org/wiki/Windows-1252" target="_blank" rel="noopener">Windows-1252</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 Windows-1252 编码&lt;/li&gt;
+&lt;li&gt;字符编码方案&lt;/li&gt;
+&lt;li&gt;和 ISO-8859-1 编码的关系&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是ISO-8859-1编码</title>
+    <link href="https://jsweibo.github.io/2020/08/07/%E4%BB%80%E4%B9%88%E6%98%AFISO-8859-1%E7%BC%96%E7%A0%81/"/>
+    <id>https://jsweibo.github.io/2020/08/07/%E4%BB%80%E4%B9%88%E6%98%AFISO-8859-1%E7%BC%96%E7%A0%81/</id>
+    <published>2020-08-07T14:15:59.000Z</published>
+    <updated>2022-11-16T08:24:04.982Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 ISO-8859-1 编码</li><li>字符编码方案</li><li>和 Windows-1252 编码的关系</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-ISO-8859-1-编码"><a href="#什么是-ISO-8859-1-编码" class="headerlink" title="什么是 ISO-8859-1 编码"></a>什么是 ISO-8859-1 编码</h2><p>又名<code>Latin-1</code></p><p><code>ISO-8859-1</code>是<code>ASCII</code>的真超集</p><p><code>ISO-8859-1</code>是<code>Unicode</code>和<code>UTF-8</code>的真子集，前 256 位完全相同</p><h2 id="字符编码方案"><a href="#字符编码方案" class="headerlink" title="字符编码方案"></a>字符编码方案</h2><p><code>ISO-8859-1</code>既是字符集，也是字符编码方案。</p><p>使用<code>8</code>个二进制位进行编码，共编码了<code>256</code>个字符</p><h2 id="和-Windows-1252-编码的关系"><a href="#和-Windows-1252-编码的关系" class="headerlink" title="和 Windows-1252 编码的关系"></a>和 Windows-1252 编码的关系</h2><p><code>Windows-1252</code>晚于<code>ISO-8859-1</code>诞生，除了<code>[0x80, 0x9F]</code>之外，<code>Windows-1252</code>向后兼容<code>ISO-8859-1</code></p><p>示例：</p><ul><li><code>ISO-8859-1</code>没有定义<code>[0x00, 0x1F]</code>、<code>[0x7F, 0x9F]</code></li><li><code>Windows-1252</code>定义了<code>[0x00, 0x1F]</code>、<code>[0x7F, 0x9F]</code></li><li><code>ISO-8859-1</code>的<code>0x80</code>位分配给了控制字符</li><li><code>Windows-1252</code>的<code>0x80</code>位分配给了欧元符号<code>€</code></li></ul><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1" target="_blank" rel="noopener">IEC_8859-1</a></li><li><a href="https://en.wikipedia.org/wiki/Windows-1252" target="_blank" rel="noopener">Windows-1252</a></li><li><a href="https://en.wikipedia.org/wiki/Unicode" target="_blank" rel="noopener">Unicode</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 ISO-8859-1 编码&lt;/li&gt;
+&lt;li&gt;字符编码方案&lt;/li&gt;
+&lt;li&gt;和 Windows-1252 编码的关系&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是EASCII</title>
+    <link href="https://jsweibo.github.io/2020/08/06/%E4%BB%80%E4%B9%88%E6%98%AFEASCII/"/>
+    <id>https://jsweibo.github.io/2020/08/06/%E4%BB%80%E4%B9%88%E6%98%AFEASCII/</id>
+    <published>2020-08-06T15:10:21.000Z</published>
+    <updated>2022-11-16T08:24:09.303Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 EASCII</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-EASCII"><a href="#什么是-EASCII" class="headerlink" title="什么是 EASCII"></a>什么是 EASCII</h2><p><code>EASCII</code>，全称为<code>Extended ASCII</code></p><p><code>EASCII</code>即<code>ASCII</code>的真超集，一切向后兼容<code>ASCII</code>的字符集或字符编码方案都属于<code>EASCII</code>。例如：<code>Windows-1252</code>、<code>ISO-8859-1</code>、<code>Unicode</code>、<code>UTF-8</code>等</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Extended_ASCII" target="_blank" rel="noopener">Extended_ASCII</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 EASCII&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是ASCII</title>
+    <link href="https://jsweibo.github.io/2020/08/05/%E4%BB%80%E4%B9%88%E6%98%AFASCII/"/>
+    <id>https://jsweibo.github.io/2020/08/05/%E4%BB%80%E4%B9%88%E6%98%AFASCII/</id>
+    <published>2020-08-05T14:19:56.000Z</published>
+    <updated>2022-02-22T15:01:18.346Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 ASCII</li><li>字符编码方案</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-ASCII"><a href="#什么是-ASCII" class="headerlink" title="什么是 ASCII"></a>什么是 ASCII</h2><p><code>ASCII</code>（读音：<code>/ˈæski/</code>），全称为 American Standard Code for Information Interchange（美国信息交换标准代码），也被称作<code>US-ASCII</code></p><h2 id="字符编码方案"><a href="#字符编码方案" class="headerlink" title="字符编码方案"></a>字符编码方案</h2><p>ASCII 既是字符集，也是字符编码方案。</p><p>ASCII 使用<code>7</code>个二进制位进行编码，共编码了<code>128</code>个字符。</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/ASCII" target="_blank" rel="noopener">ASCII</a></li><li><a href="https://www.oxfordlearnersdictionaries.com/definition/english/ascii" target="_blank" rel="noopener">ascii</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 ASCII&lt;/li&gt;
+&lt;li&gt;字符编码方案&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+      <category term="字符集" scheme="https://jsweibo.github.io/categories/Wiki/IT/%E5%AD%97%E7%AC%A6%E9%9B%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中的document.getElementsByTagName</title>
+    <link href="https://jsweibo.github.io/2020/08/04/JavaScript%E4%B8%AD%E7%9A%84document-getElementsByTagName/"/>
+    <id>https://jsweibo.github.io/2020/08/04/JavaScript%E4%B8%AD%E7%9A%84document-getElementsByTagName/</id>
+    <published>2020-08-04T13:34:55.000Z</published>
+    <updated>2022-03-12T08:11:16.936Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li><li>参数</li><li>返回值类型</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>获取指定元素名的元素集合</p><p>示例：获取本文档中的所有<code>div</code>元素</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'div'</span>);</span><br></pre></td></tr></table></figure><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="tagName"><a href="#tagName" class="headerlink" title="tagName"></a>tagName</h3><p>元素名</p><p>注：如果需要获取文档中的所有元素，将<code>tagName</code>设为<code>*</code></p><p>示例：获取本文档中的所有元素</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'*'</span>);</span><br></pre></td></tr></table></figure><h2 id="返回值类型"><a href="#返回值类型" class="headerlink" title="返回值类型"></a>返回值类型</h2><p><code>HTMLCollection</code>实例</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName" target="_blank" rel="noopener">getElementsByTagName</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;li&gt;参数&lt;/li&gt;
+&lt;li&gt;返回值类型&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="语言" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="JavaScript" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中的document.createElement</title>
+    <link href="https://jsweibo.github.io/2020/08/03/JavaScript%E4%B8%AD%E7%9A%84document-createElement/"/>
+    <id>https://jsweibo.github.io/2020/08/03/JavaScript%E4%B8%AD%E7%9A%84document-createElement/</id>
+    <published>2020-08-03T15:02:13.000Z</published>
+    <updated>2022-07-12T01:48:13.347Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li><li>参数</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>创建 HTML 元素</p><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><h3 id="tagName"><a href="#tagName" class="headerlink" title="tagName"></a>tagName</h3><p>元素名称</p><ul><li>类型：<code>string</code></li><li>是否必填：是</li></ul><h3 id="options"><a href="#options" class="headerlink" title="options"></a>options</h3><p>选项</p><ul><li>类型：<code>Object</code></li><li>是否必填：否</li></ul><h4 id="options-is"><a href="#options-is" class="headerlink" title="options.is"></a>options.is</h4><p>自定义内建元素的名称</p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement" target="_blank" rel="noopener">createElement</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;li&gt;参数&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="语言" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="JavaScript" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+      <category term="document" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/JavaScript/document/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中的debugger语句</title>
+    <link href="https://jsweibo.github.io/2020/08/02/JavaScript%E4%B8%AD%E7%9A%84debugger%E8%AF%AD%E5%8F%A5/"/>
+    <id>https://jsweibo.github.io/2020/08/02/JavaScript%E4%B8%AD%E7%9A%84debugger%E8%AF%AD%E5%8F%A5/</id>
+    <published>2020-08-02T14:50:43.000Z</published>
+    <updated>2022-02-22T14:57:21.704Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li><li>反调试</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>打开控制台后，当程序执行到<code>debugger</code>语句时，脚本会暂停在这一行</p><p>注：</p><ol><li>如果不打开控制台，即使程序执行到<code>debugger</code>语句，什么事也不会发生</li><li>打开控制台后，如果程序没有执行到<code>debugger</code>语句，什么事也不会发生</li></ol><p>示例：打开控制台后，用户在页面中点击鼠标，脚本会暂停在<code>debugger</code>这一行</p><p><code>learn_js/index.html</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"js/index.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>learn_js/js/index.js</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hello, world'</span>);</span><br><span class="line">  <span class="keyword">debugger</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hello, jsweibo'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="反调试"><a href="#反调试" class="headerlink" title="反调试"></a>反调试</h2><p>示例：打开控制台后，脚本会不断地暂停在<code>debugger</code>这一行；但用户只要不打开控制台，什么事也不会发生</p><p><code>learn_js/index.html</code></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"IE=edge"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">src</span>=<span class="string">"js/index.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p><code>learn_js/js/index.js</code></p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">debugger</span>;</span><br><span class="line">&#125;, <span class="number">1e3</span>);</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger" target="_blank" rel="noopener">debugger</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;li&gt;反调试&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="语言" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/"/>
+    
+      <category term="JavaScript" scheme="https://jsweibo.github.io/categories/%E8%AF%AD%E8%A8%80/JavaScript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>什么是dry run</title>
+    <link href="https://jsweibo.github.io/2020/08/01/%E4%BB%80%E4%B9%88%E6%98%AFdry-run/"/>
+    <id>https://jsweibo.github.io/2020/08/01/%E4%BB%80%E4%B9%88%E6%98%AFdry-run/</id>
+    <published>2020-08-01T13:26:55.000Z</published>
+    <updated>2022-10-05T04:21:13.969Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>什么是 dry run</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="什么是-dry-run"><a href="#什么是-dry-run" class="headerlink" title="什么是 dry run"></a>什么是 dry run</h2><p>dry run 意为演习、彩排、空运行、试运行。</p><p>在计算机术语中，dry run 表示：显示运行的结果，但实际上并没有做出任何变更。</p><p>示例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 试运行安装jquery，实际并没有安装</span></span><br><span class="line">npm install jquery --dry-run</span><br></pre></td></tr></table></figure><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 试运行新建文件，实际并没有创建文件</span></span><br><span class="line"><span class="built_in">New-item</span> foo.txt <span class="literal">-WhatIf</span></span><br></pre></td></tr></table></figure><p>注意：某些情况下，dry run 的结果是不可靠的</p><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 若`to\`不存在，`from\README.txt` -&gt; `to`</span></span><br><span class="line"><span class="built_in">Move-Item</span> from\README.txt to\</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若`to\`不存在</span></span><br><span class="line"><span class="comment"># 试运行：`from\README.txt` -&gt; `to\README.txt`</span></span><br><span class="line"><span class="built_in">Move-Item</span> from\README.txt to\ <span class="literal">-WhatIf</span></span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://en.wikipedia.org/wiki/Dry_run_(testing)" target="_blank" rel="noopener">Dry run</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什么是 dry run&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Wiki" scheme="https://jsweibo.github.io/categories/Wiki/"/>
+    
+      <category term="IT" scheme="https://jsweibo.github.io/categories/Wiki/IT/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>powershell中的Get-PSDrive</title>
+    <link href="https://jsweibo.github.io/2020/07/31/powershell%E4%B8%AD%E7%9A%84Get-PSDrive/"/>
+    <id>https://jsweibo.github.io/2020/07/31/powershell%E4%B8%AD%E7%9A%84Get-PSDrive/</id>
+    <published>2020-07-31T15:39:17.000Z</published>
+    <updated>2022-11-28T14:59:13.329Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>获取驱动器列表</li><li>获取指定类型的驱动器列表</li><li>获取指定驱动器</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="获取驱动器列表"><a href="#获取驱动器列表" class="headerlink" title="获取驱动器列表"></a>获取驱动器列表</h2><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-PSDrive</span></span><br></pre></td></tr></table></figure><h2 id="获取指定类型的驱动器列表"><a href="#获取指定类型的驱动器列表" class="headerlink" title="获取指定类型的驱动器列表"></a>获取指定类型的驱动器列表</h2><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-PSDrive</span> <span class="literal">-PSProvider</span> FileSystem</span><br></pre></td></tr></table></figure><h2 id="获取指定驱动器"><a href="#获取指定驱动器" class="headerlink" title="获取指定驱动器"></a>获取指定驱动器</h2><p>示例：获取驱动器 C</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-PSDrive</span> C</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-psdrive" target="_blank" rel="noopener">get-psdrive</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;获取驱动器列表&lt;/li&gt;
+&lt;li&gt;获取指定类型的驱动器列表&lt;/li&gt;
+&lt;li&gt;获取指定驱动器&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://jsweibo.github.io/categories/Shell/"/>
+    
+      <category term="PowerShell" scheme="https://jsweibo.github.io/categories/Shell/PowerShell/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>powershell中的Get-Command</title>
+    <link href="https://jsweibo.github.io/2020/07/30/powershell%E4%B8%AD%E7%9A%84Get-Command/"/>
+    <id>https://jsweibo.github.io/2020/07/30/powershell%E4%B8%AD%E7%9A%84Get-Command/</id>
+    <published>2020-07-30T13:59:40.000Z</published>
+    <updated>2022-11-28T14:59:13.336Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>列出所有类型的所有命令</li><li>列出指定类型的命令</li><li>列出指令、函数和别名</li><li>列出指定命令</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="列出所有类型的所有命令"><a href="#列出所有类型的所有命令" class="headerlink" title="列出所有类型的所有命令"></a>列出所有类型的所有命令</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> *</span><br></pre></td></tr></table></figure><p>包括但不限于：</p><ul><li>指令 <code>Cmdlet</code></li><li>别名 <code>Alias</code></li><li>函数 <code>Function</code></li><li>应用 <code>Application</code></li><li>过滤器 <code>Filter</code></li><li>脚本 <code>Script</code></li></ul><h2 id="列出指定类型的命令"><a href="#列出指定类型的命令" class="headerlink" title="列出指定类型的命令"></a>列出指定类型的命令</h2><p>示例：列出<code>Cmdlet</code>型命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> <span class="literal">-CommandType</span> Cmdlet</span><br></pre></td></tr></table></figure><p>示例：列出所有命令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> <span class="literal">-CommandType</span> All</span><br></pre></td></tr></table></figure><h2 id="列出指令、函数和别名"><a href="#列出指令、函数和别名" class="headerlink" title="列出指令、函数和别名"></a>列出指令、函数和别名</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span></span><br></pre></td></tr></table></figure><h2 id="列出指定命令"><a href="#列出指定命令" class="headerlink" title="列出指定命令"></a>列出指定命令</h2><p>示例：列出指定指令</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> <span class="built_in">Get-ChildItem</span></span><br></pre></td></tr></table></figure><p>示例：列出指定别名</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> ls</span><br></pre></td></tr></table></figure><p>示例：列出指定函数</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> <span class="built_in">Get-FileHash</span></span><br></pre></td></tr></table></figure><p>示例：列出指定应用</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Command</span> tree</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/get-command" target="_blank" rel="noopener">get-command</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;列出所有类型的所有命令&lt;/li&gt;
+&lt;li&gt;列出指定类型的命令&lt;/li&gt;
+&lt;li&gt;列出指令、函数和别名&lt;/li&gt;
+&lt;li&gt;列出指定命令&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://jsweibo.github.io/categories/Shell/"/>
+    
+      <category term="PowerShell" scheme="https://jsweibo.github.io/categories/Shell/PowerShell/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>powershell中的Test-Connection</title>
+    <link href="https://jsweibo.github.io/2020/07/29/powershell%E4%B8%AD%E7%9A%84Test-Connection/"/>
+    <id>https://jsweibo.github.io/2020/07/29/powershell%E4%B8%AD%E7%9A%84Test-Connection/</id>
+    <published>2020-07-29T14:05:05.000Z</published>
+    <updated>2022-11-28T14:59:13.340Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>测试网络连接是否畅通</p><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ping 指定域名</span></span><br><span class="line"><span class="built_in">Test-Connection</span> jsweibo.github.io</span><br><span class="line"></span><br><span class="line"><span class="comment"># ping 指定 IP</span></span><br><span class="line"><span class="built_in">Test-Connection</span> <span class="number">8.8</span>.<span class="number">8.8</span></span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/test-connection" target="_blank" rel="noopener">test-connection</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://jsweibo.github.io/categories/Shell/"/>
+    
+      <category term="PowerShell" scheme="https://jsweibo.github.io/categories/Shell/PowerShell/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>powershell中的Restart-Service</title>
+    <link href="https://jsweibo.github.io/2020/07/28/powershell%E4%B8%AD%E7%9A%84Restart-Service/"/>
+    <id>https://jsweibo.github.io/2020/07/28/powershell%E4%B8%AD%E7%9A%84Restart-Service/</id>
+    <published>2020-07-28T13:21:02.000Z</published>
+    <updated>2022-11-28T14:59:13.349Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>重启服务</p><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Restart-Service</span> MySQL</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-service" target="_blank" rel="noopener">restart-service</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://jsweibo.github.io/categories/Shell/"/>
+    
+      <category term="PowerShell" scheme="https://jsweibo.github.io/categories/Shell/PowerShell/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>powershell中的Stop-Service</title>
+    <link href="https://jsweibo.github.io/2020/07/27/powershell%E4%B8%AD%E7%9A%84Stop-Service/"/>
+    <id>https://jsweibo.github.io/2020/07/27/powershell%E4%B8%AD%E7%9A%84Stop-Service/</id>
+    <published>2020-07-27T13:16:50.000Z</published>
+    <updated>2022-11-28T14:59:13.357Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>本文主要讲述了：</p><ol><li>作用</li></ol><a id="more"></a><h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>停止服务</p><p>示例：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Stop-Service</span> MySQL</span><br></pre></td></tr></table></figure><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul><li><a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-service" target="_blank" rel="noopener">stop-service</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h1&gt;&lt;p&gt;本文主要讲述了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;作用&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="Shell" scheme="https://jsweibo.github.io/categories/Shell/"/>
+    
+      <category term="PowerShell" scheme="https://jsweibo.github.io/categories/Shell/PowerShell/"/>
+    
+    
+  </entry>
+  
+</feed>
